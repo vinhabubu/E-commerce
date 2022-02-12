@@ -15,7 +15,7 @@ function App() {
         <Product />
         <Login />
         <Register /> */}
-        <Cart />
+        <Login />
       </div>
     );
   }
