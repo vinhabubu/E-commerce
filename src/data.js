@@ -28,16 +28,19 @@ export const sliderItems = [
       id: 1,
       img: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ciftv1we0zgqjvudzgl5/sportswear-older-t-shirt-F1c964.png",
       title: "SHIRT STYLE!",
+      cat:"women"
     },
     {
       id: 2,
       img: "https://media.missguided.com/i/missguided/N9337483_03?fmt=jpeg&fmt.jpeg.interlaced=true&$product-page__main--2x$",
       title: "LOUNGEWEAR LOVE",
+      cat:"coat"
     },
     {
       id: 3,
       img: "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/064/products/sportswear-womens-faux-fur-jacket-ffplhb.jpg?v=1610474976557",
       title: "LIGHT JACKETS",
+      cat:"jeans"
     },
   ];
 
