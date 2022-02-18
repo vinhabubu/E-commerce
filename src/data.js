@@ -32,15 +32,15 @@ export const sliderItems = [
     },
     {
       id: 2,
-      img: "https://media.missguided.com/i/missguided/N9337483_03?fmt=jpeg&fmt.jpeg.interlaced=true&$product-page__main--2x$",
-      title: "LOUNGEWEAR LOVE",
+      img: "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/064/products/sportswear-womens-faux-fur-jacket-ffplhb.jpg?v=1610474976557",
+      title: "LIGHT JACKETS",
       cat:"coat"
     },
     {
       id: 3,
-      img: "https://bizweb.dktcdn.net/thumb/1024x1024/100/347/064/products/sportswear-womens-faux-fur-jacket-ffplhb.jpg?v=1610474976557",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
+      img: "https://sanvt.com/wp-content/uploads/2020/10/The-heavyweight-tshirt-men-white-SANVT-4.jpg",
+      title: "SPORT STYLE",
+      cat:"men"
     },
   ];
 
