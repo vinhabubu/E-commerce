@@ -8,7 +8,7 @@ export const sliderItems = [
     },
     {
       id: 2,
-      img: "https://fbshop.vn/wp-content/uploads/2020/07/Nike-chicago-black-toe.gif",
+      img: "https://theclosetlover.g.shopcadacdn.com/sites/files/theclosetlover/croppedstore_0001_Image%20from%20iOS%20(163).jpg",
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",

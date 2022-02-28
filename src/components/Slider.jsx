@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {sliderItems} from "../data"
 import {useState} from "react"
 import {mobile} from '../reponsive'
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -48,6 +49,8 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
+  margin-top: 5%;
+  padding: 8%;
   height: 100%;
   flex: 1;
 `;
@@ -103,7 +106,10 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Link to={`/products/tee`}>
+                <Button>SHOP NOW</Button>
+              </Link>
+              
             </InfoContainer>
           </Slide>
         ))}
