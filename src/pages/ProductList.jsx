@@ -8,6 +8,9 @@ import Products from '../components/Products';
 import {mobile} from '../reponsive';
 import { useLocation } from "react-router";
 import { useState } from "react";
+import { Search} from "@material-ui/icons";
+import {searchItems} from "../components/Products"
+
 
 const Container = styled.div``;
 
@@ -53,6 +56,19 @@ const ProductList = () => {
     });
   };
 
+//   const SearchContainer = styled.div`
+  
+//   display: flex;
+//   align-items: center;
+//   margin-left: 25px;
+//   padding: 5px;
+// `;
+
+// const Input = styled.input`
+// border: none;
+// ${mobile({ width: "50px" })}
+// `;
+
   return (
     <Container>
       <Navbar />
@@ -83,6 +99,10 @@ const ProductList = () => {
             <Option>XL</Option>
           </Select>
         </Filter>
+        {/* <SearchContainer>
+            <Input placeholder="Search"  onChange={(e) => searchItems(e.target.value)}/>
+            <Search style={{ color: "gray", fontSize: 16 }} />
+        </SearchContainer> */}
         <Filter>
           <FilterText>Sort Products:</FilterText>
           <Select onChange={(e) => setSort(e.target.value)}>

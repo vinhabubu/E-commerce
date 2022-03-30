@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import {mobile} from '../reponsive'
 import {useSelector} from 'react-redux'
+import StripeCheckout from 'react-stripe-checkout'
 
 const Container = styled.div``;
 
@@ -153,6 +154,8 @@ const Button = styled.button`
   color: white;
   font-weight: 600;
 `;
+
+
 
 const Cart = () => {
   const cart = useSelector(state => state.cart)

@@ -5,6 +5,8 @@ import {popularProducts} from '../data'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from "axios";
+import { Search} from "@material-ui/icons";
+
 
 const Container = styled.div`
     padding: 20px;
@@ -13,10 +15,24 @@ const Container = styled.div`
     justify-content: space-between;
     `;
 
+  //   const SearchContainer = styled.div`
+  
+  //   display: flex;
+  //   align-items: center;
+  //   margin-left: 25px;
+  //   padding: 5px;
+  // `;
+  
+  const Input = styled.input`
+  border: none;
+  `;
+  
+
 const Products = ({cat, filters, sort}) => {
     // console.log(cat, filters, sort)
     const [products,setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const [searchInput, setSearchInput] = useState('');
     
     useEffect(() => {
         const getProducts = async () => {
@@ -32,6 +48,8 @@ const Products = ({cat, filters, sort}) => {
           };
           getProducts();
     },[cat])
+
+    
 
     useEffect(() => {
         cat &&
@@ -59,11 +77,37 @@ const Products = ({cat, filters, sort}) => {
           );
         }
       },[sort]);
+
+
+      const searchItems = (searchValue) => {
+        setSearchInput(searchValue)
+        if (searchInput !== '') {
+            const filteredData =products.filter((item) => {
+                return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+            })
+            setFilteredProducts(filteredData)
+        }
+        else{
+          setFilteredProducts(products)
+        }
+    }
   return (
       <Container>
-          {filteredProducts.map((item) => (
+        {/* <SearchContainer>
+            <Input placeholder="Search"  onChange={(e) => searchItems(e.target.value)}/>
+            <Search style={{ color: "gray", fontSize: 16 }} />
+        </SearchContainer> */}
+        <Container>
+        {searchItems.length > 1 ? (
+          filteredProducts.map((item) => (
               <Product item={item} key={item.id} />
-          ))}
+          ))
+        ): (
+          products.map((item) => (
+            <Product item={item} key={item.id} />
+        ))
+        )}
+        </Container>
       </Container>
   );
 };
